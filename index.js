@@ -20,7 +20,6 @@ function createMenuItem(name, price, category){
 }
 
 
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -88,8 +87,6 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
 
 reviews[7] = {name: "Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"};
 console.log('task 5', reviews);
@@ -105,8 +102,11 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array, name, rating, feedback){
-  
+  array.push({name, rating, feedback});
+  return array;
 }
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -139,11 +139,9 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  let lastReview = array.length -1;
-  return `${array[lastReview].name} gave the restaurant a ${array[lastReview].rating} star review, and their feedback was: ${array[lastReview].feedback}`
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`;
 } 
 
-console.log('task 7', getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
